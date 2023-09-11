@@ -1,6 +1,6 @@
 # Activity 2: Crash Course on C
 
-## Put Name(s) here
+## Ben Bridenbaugh
 Folder: `activities_c_practice`
 
 This is an introduction to 
