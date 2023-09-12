@@ -11,7 +11,7 @@ void loop_example();
 void utype_sizes();
 
 // TODO: (Task 4) Put declaration of stype_sizes here
-
+void stype_sizes();
 
 
 int main() {
@@ -24,7 +24,7 @@ int main() {
     float total3 = sales_example(1,3,0.09);
     printf("Total3 = $%.2f\n",sales_example(1,3,0.09));
     float total4 = sales_example(1,3,0.0);
-    printf("Total4 = $%.2f\n",total4);
+    printf("Total4 = $%.2f\n\n",total4);
 
     // TODO: Test on multiple calls, then add assert statements here
 
@@ -40,7 +40,7 @@ int main() {
     utype_sizes();
 
     // TASK 4: signed integer types, sizes, mins and maxs
-    // TODO: place function call here
+    stype_sizes();
 
     return 0;
 }
@@ -64,13 +64,30 @@ float sales_example(float item_cost, unsigned short num_items, float tax) {
     * Create your loop_example function here
     */
    void loop_example(){
+    printf("for loop\n");
     for (int i = 10; i < 26; i+=5)
     {
         printf("i = %d\n",i);
         printf("i^2 = %d\n", i*i);
     }
 
+    printf("\nwhile loop\n");
+    int i = 10;
+    while (i < 26)
+    {
+        printf("i = %d\n",i);
+        printf("i^2 = %d\n", i*i);
+        i+=5;
+    }
     
+    printf("\ndo-while loop\n");
+    i = 10;
+    do
+    {
+        printf("i = %d\n",i);
+        printf("i^2 = %d\n", i*i);
+        i+=5;
+    } while (i<26);
     
    }
 
@@ -82,9 +99,42 @@ void utype_sizes() {
 	printf("unsigned char | max: %hu | size: %zu\n", 
            (unsigned char) UCHAR_MAX, 
            sizeof(unsigned char));
+
+    printf("unsigned short | max: %hu | size: %zu\n", 
+            (unsigned short) USHRT_MAX, 
+            sizeof(unsigned short));
+    
+    printf("unsigned int | max: %u | size: %zu\n", 
+            (unsigned int) UINT_MAX, 
+            sizeof(unsigned int));
+    
+    printf("unsigned long | max: %lu | size: %zu\n", 
+            (unsigned long) ULONG_MAX, 
+            sizeof(unsigned long));
 }
 
 /** TODO TASK 4:
     * Create your stype_sizes function here to print min/max values and sizes of 
     * signed integer types: char, short, int, long
     */
+void stype_sizes(){
+    printf("signed char | min: %d | max: %d | size: %zu\n", 
+            (signed char) SCHAR_MIN,
+            (signed char) SCHAR_MAX, 
+            sizeof(signed char));
+
+    printf("signed short | min: %d | max: %d | size: %zu\n",
+            (signed short) SHRT_MIN, 
+            (signed short) SHRT_MAX, 
+            sizeof(signed short));
+    
+    printf("signed int | min: %d | max: %d | size: %zu\n", 
+            (signed int) INT_MIN,
+            (signed int) INT_MAX, 
+            sizeof(signed int));
+    
+    printf("signed long | min: %ld | max: %ld | size: %zu\n", 
+            (signed long) LONG_MIN,
+            (signed long) LONG_MAX, 
+            sizeof(signed long));
+}

@@ -143,10 +143,10 @@ maximum value for that type, and its number of bytes
 
 | Type              | Max value  | Number Bytes |
 | :-------------:   | :-------:  | :----------: |
-| `unsigned char`   |            |              |
-| `unsigned short`  |            |              |
-| `unsigned int`    |            |              |
-| `unsigned long`   |            |              |
+| `unsigned char`   |      255      |       1       |
+| `unsigned short`  |      655235      |        2      |
+| `unsigned int`    |      4294967295      |        4      |
+| `unsigned long`   |      18446744073709551615      |        8      |
 
 
 ### Task 4: Exploring sizes and ranges for signed integer types
@@ -161,10 +161,10 @@ maximum value for that type, and its number of bytes
 
 | Type     | Min value  | Max value  | Number Bytes |
 | :----:   | :--------: | :--------: | :----------: |
-| `char`   |            |            |              |
-| `short`  |            |            |              |
-| `int`    |            |            |              |
-| `long`   |            |            |              |
+| `char`   |      -128      |      127      |      1        |
+| `short`  |      -32768      |      32767      |       2       |
+| `int`    |      -2147483648      |     2147483647       |       4       |
+| `long`   |      -9223372036854775808      |      9223372036854775808      |        8      |
 
 
 ### Notes 
